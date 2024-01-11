@@ -6,8 +6,6 @@ settings:
 
 overrides:
   '@nuxt/schema': 3.9.1
-  '@nuxt/image-edge': link:.
-  '@nuxt/image': link:.
 
 dependencies:
   '@nuxt/kit':
@@ -47,9 +45,6 @@ optionalDependencies:
     version: 2.0.2
 
 devDependencies:
-  '@nuxt/image':
-    specifier: 'link:'
-    version: 'link:'
   '@nuxt/module-builder':
     specifier: 0.5.5
     version: 0.5.5(@nuxt/kit@3.9.1)(nuxi@3.10.0)(typescript@5.3.3)
