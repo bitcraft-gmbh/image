@@ -1,7 +1,6 @@
 import { h, defineComponent, ref, computed, onMounted } from "vue";
 import { useImage } from "../composables.mjs";
 import { parseSize } from "../utils/index.mjs";
-import { prerenderStaticImages } from "../utils/prerender.mjs";
 import { baseImageProps, useBaseImage } from "./_base.mjs";
 import { useHead, useNuxtApp } from "#imports";
 export const imgProps = {
@@ -72,9 +71,6 @@ export default defineComponent({
           }
         }]
       });
-    }
-    if (process.server && process.env.prerender) {
-      prerenderStaticImages(src.value, sizes.value.srcset);
     }
     const imgEl = ref();
     const nuxtApp = useNuxtApp();

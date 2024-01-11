@@ -92,9 +92,9 @@ export default defineComponent({
     }
 
     // Prerender static images
-    if (process.server && process.env.prerender) {
-      prerenderStaticImages(src.value, sizes.value.srcset)
-    }
+    // if (process.server && process.env.prerender) {
+    //   prerenderStaticImages(src.value, sizes.value.srcset)
+    // }
 
     const imgEl = ref<HTMLImageElement>()
 

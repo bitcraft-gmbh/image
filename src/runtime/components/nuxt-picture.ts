@@ -78,11 +78,11 @@ export default defineComponent({
     const imgEl = ref<HTMLImageElement>()
 
     // Prerender static images
-    if (process.server && process.env.prerender) {
-      for (const src of sources.value as Source[]) {
-        prerenderStaticImages(src.src, src.srcset)
-      }
-    }
+    //if (process.server && process.env.prerender) {
+    //  for (const src of sources.value as Source[]) {
+    //    prerenderStaticImages(src.src, src.srcset)
+    //  }
+    //}
 
     const nuxtApp = useNuxtApp()
     const initialLoad = nuxtApp.isHydrating
