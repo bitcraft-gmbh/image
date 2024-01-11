@@ -2,16 +2,12 @@ import { defu } from "defu";
 import { hasProtocol, parseURL, joinURL, withLeadingSlash } from "ufo";
 import { imageMeta } from "./utils/meta.mjs";
 import { checkDensities, parseDensities, parseSize, parseSizes } from "./utils/index.mjs";
-import { prerenderStaticImages } from "./utils/prerender.mjs";
 export function createImage(globalOptions) {
   const ctx = {
     options: globalOptions
   };
   const getImage = (input, options = {}) => {
     const image = resolveImage(ctx, input, options);
-    if (process.server && process.env.prerender) {
-      prerenderStaticImages(image.url);
-    }
     return image;
   };
   const $img = (input, modifiers = {}, options = {}) => {

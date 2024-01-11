@@ -14,9 +14,9 @@ export function createImage (globalOptions: CreateImageOptions) {
     const image = resolveImage(ctx, input, options)
 
     // Prerender static images
-    if (process.server && process.env.prerender) {
-      prerenderStaticImages(image.url)
-    }
+    // if (process.server && process.env.prerender) {
+    //   prerenderStaticImages(image.url)
+    // }
 
     return image
   }

@@ -1,9 +1,7 @@
 import { appendHeader } from "h3";
 import { useRequestEvent } from "#imports";
 export function prerenderStaticImages(src = "", srcset = "") {
-  if (!process.server || !process.env.prerender) {
-    return;
-  }
+  return;
   const paths = [
     src,
     ...srcset.split(", ").map((s) => s.trim().split(" ")[0].trim())
