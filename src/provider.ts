@@ -52,7 +52,7 @@ export type ImageProviderName = typeof BuiltInProviders[number]
 export const providerSetup: Partial<Record<ImageProviderName, ProviderSetup>> = {
   // IPX
   ipx: ipxSetup(),
-  ipxStatic: ipxSetup({ isStatic: true }),
+  ipxStatic: ipxSetup({ isStatic: false }),
 
   // https://vercel.com/docs/more/adding-your-framework#images
   vercel (_providerOptions, moduleOptions, nuxt: Nuxt) {
